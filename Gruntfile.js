@@ -17,6 +17,17 @@ module.exports = function (grunt) {
         files: ['src/*.js', 'spec/*Spec.js'],
         tasks: ['jasmine_node']
       }
+    },
+    conventionalChangelog: {
+      options: {
+        changelogOpts: {
+          // conventional-changelog options go here
+          preset: 'angular'
+        }
+      },
+      release: {
+        src: 'CHANGELOG.md'
+      }
     }
   });
 
